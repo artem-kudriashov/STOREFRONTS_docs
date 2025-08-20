@@ -46,8 +46,9 @@ Ecwid.openPage(
 * `'checkout/payment'` - Checkout step 4. Customers choose a payment method and go to the payment page.
 * `'checkout/order-confirmation'`- "Thank you for purchase" page customers see after placing an order.
 * `'account'` - Customer's account page.
-* `'account/address-book'`- Customer's account page (saved shipping addresses).
-* `'account/favorites'`- Customer's account page (products added to favorites).
+* `'account/address-book'` - Customer's account page (saved shipping addresses).
+* `'account/favorites'` - Customer's account page (products added to favorites).
+* `'account/subscription'` - Customer subscriptions' page (active and ended subscription products purchased by the customer).
 * `'pages/about'` - Legal page (about the store).
 * `'pages/shipping-payment'` - Legal page (shipping/payment policies).
 * `'pages/returns'` - Legal page (return policy).

@@ -17,9 +17,9 @@ Ecwid.OnSetProfile.add(function(customer){
 // "ec.apps@lightspeedhq.com"
 ```
 
-#### `page` argument fields:
+#### `customer` argument fields:
 
-<table><thead><tr><th width="197">Field</th><th width="181">Type</th><th>Description</th></tr></thead><tbody><tr><td>email</td><td>string</td><td>Customer's email.</td></tr><tr><td>id</td><td>number</td><td>Customer's internal ID.</td></tr><tr><td>ownerId</td><td>number</td><td>Internal store ID.</td></tr><tr><td>registered</td><td>string</td><td>Customer's registration date in a stringified UNIX timestamp format. <br><br>For example, <code>"1718010611"</code>.</td></tr><tr><td>billingPerson</td><td>object <a href="customer-logged-in-event.md#billingperson">billingPerson</a></td><td>Customer's saved billing address.</td></tr><tr><td>shippingAddresses</td><td>array of objects <a href="customer-logged-in-event.md#shippingaddresses">shippingAddresses</a></td><td>Customer's saved shipping addresses.</td></tr></tbody></table>
+<table><thead><tr><th width="197">Field</th><th width="181">Type</th><th>Description</th></tr></thead><tbody><tr><td>email</td><td>string</td><td>Customer's email.</td></tr><tr><td>id</td><td>number</td><td>Customer's internal ID.</td></tr><tr><td>membership</td><td>object <a href="customer-logged-in-event.md#membership">membership</a></td><td>Customer's group information.<br><br>If customer belongs to a general group, this field is omitted from the callback. </td></tr><tr><td>ownerId</td><td>number</td><td>Internal store ID.</td></tr><tr><td>registered</td><td>string</td><td>Customer's registration date in a stringified UNIX timestamp format. <br><br>For example, <code>"1718010611"</code>.</td></tr><tr><td>billingPerson</td><td>object <a href="customer-logged-in-event.md#billingperson">billingPerson</a></td><td>Customer's saved billing address.</td></tr><tr><td>shippingAddresses</td><td>array of objects <a href="customer-logged-in-event.md#shippingaddresses">shippingAddresses</a></td><td>Customer's saved shipping addresses.</td></tr></tbody></table>
 
 #### billingPerson
 
@@ -29,3 +29,6 @@ Ecwid.OnSetProfile.add(function(customer){
 
 <table><thead><tr><th width="130">Field</th><th width="200">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>number</td><td><p>Ordered ID of saved shipping address.<br></p><p>Starts with <code>0</code> and iterates by <code>1</code>.</p></td></tr><tr><td>person</td><td>object <a href="customer-logged-in-event.md#billingperson">billingPerson</a></td><td>Details of the saved shipping address.</td></tr></tbody></table>
 
+#### membership
+
+<table><thead><tr><th width="130">Field</th><th width="200">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>number</td><td>Customer group's ID.</td></tr><tr><td>name</td><td>string</td><td>Name of the customer group.</td></tr><tr><td>ownerId</td><td>number</td><td>ID of the store customer group belongs to.</td></tr></tbody></table>
