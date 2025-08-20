@@ -37,6 +37,9 @@ Ecwid.openPage(
 
 ### Full list of available pages
 
+* `'product'` - Product page. Additional params allow you to pre-select options or even variations.&#x20;
+* `'category'` - Page of a specific category.
+* `'search'` - Search products page. Additional params allow you to make preconfigured search links.
 * `'cart'` - Checkout step 1. Customers enter their email and apply discount coupons.
 * `'checkout/address'` - Checkout step 2. Customers enter their address.
 * `'checkout/shipping'` - Checkout step 3. Customers choose shipping/pickup method.
@@ -51,5 +54,20 @@ Ecwid.openPage(
 * `'pages/terms'` - Legal page (Terms of use).
 * `'pages/privacy-policy'` - Legal page (Cookie/Privacy policies).
 
-Some pages can be opened with additional params. Check them out:
+Learn more about pages that can be opened with additional params:
 
+{% content-ref url="open-product-pages-with-params.md" %}
+[open-product-pages-with-params.md](open-product-pages-with-params.md)
+{% endcontent-ref %}
+
+{% content-ref url="open-category-pages-with-params.md" %}
+[open-category-pages-with-params.md](open-category-pages-with-params.md)
+{% endcontent-ref %}
+
+{% content-ref url="open-search-page-with-params.md" %}
+[open-search-page-with-params.md](open-search-page-with-params.md)
+{% endcontent-ref %}
+
+{% content-ref url="open-account-pages-with-params.md" %}
+[open-account-pages-with-params.md](open-account-pages-with-params.md)
+{% endcontent-ref %}
