@@ -57,21 +57,3 @@ console.log(widgets);
 // prints 
 // ["Minicart", "SearchPanel", "ProductBrowser"]
 ```
-
-### `Ecwid.isStorefrontV3()`
-
-This method is useful for public applications developed before 2024. It helps apps to adapt their design by detecting the old storefront version.
-
-{% hint style="info" %}
-All stores created in 2024 and later are using the latest storefront without the ability to switch the version.
-{% endhint %}
-
-Code example:
-
-```javascript
-var v3Migration = Ecwid.isStorefrontV3();
-console.log(v3Migration);
-
-// prints if enabled
-// true
-```
