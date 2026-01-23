@@ -21,10 +21,6 @@ Only the `products` field is required for the method to work.
 
 Once you have a variable with cart JSON, use `JSON.stringify()` method to convert it to a string, then encode it with the `encodeURIComponent()` method.
 
-{% hint style="info" %}
-If you use a Wix website, you need an additional encoding to base64 format with `btoa()` method before using `encodeURIComponent()`.
-{% endhint %}
-
 With the cart encoded to a `cartCode` variable, you can compose a link that opens a shopping cart and fills it with products and address details.
 
 <details>
@@ -33,6 +29,9 @@ With the cart encoded to a `cartCode` variable, you can compose a link that open
 
 ```javascript
 var cartPageLink = "https://mywebsite.com/store#!/~/cart/create=";
+
+// For Wix users, it'll be:
+// var cartPageLink = "https://mywebsite.com/!/~/cart/create="
 
 var cartItems = [{
     "id": 66821181, // ID of the product in Ecwid
@@ -72,6 +71,9 @@ var cart = {
 cart = JSON.stringify(cart);
 cartCode = encodeURIComponent(cart);
 
+// For Wix users, it'll be:
+// cartCode = encodeURIComponent(btoa(cart));
+
 console.log(cartCode);
 
 // prints the resulting string used for creating the cart
@@ -89,3 +91,9 @@ console.log(finalLink);
 
 
 </details>
+
+{% hint style="info" %}
+If you use a Wix website, you need to base64-encode cart URL with `btoa()` method before using `encodeURIComponent()`.\
+\
+Additionally, you'll need to change base cart URL to `"https://mywebsite.com/!/~/cart/create="` &#x20;
+{% endhint %}
