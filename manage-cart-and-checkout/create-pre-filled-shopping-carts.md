@@ -1,27 +1,18 @@
 # Create pre-filled shopping carts
 
-Checkout API allows you to create URLs that open a shopping cart and fill it with products and delivery details. Use it for promotions or sharing pre-filled carts with customers. The whole process happens in a JavaScript file and results in a shopping cart URL that you can share with customers or post on social media.
+Checkout API allows you to create URLs that open a shopping cart and fill it with products and delivery details. These links can be used for promotions or sharing pre-filled carts with customers.
 
-### Pre-requirements
+Here's how you can get such a link:
 
-Your website must load the following files below the store widget. Both of them are required for the feature to work:
-
-```html
-<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/ecwid-addons/apps/ecwid-cart-app/cartapp.css">
-<script src="https://s3.amazonaws.com/ecwid-addons/apps/ecwid-cart-app/cart.js"></script>
-```
-
-### Create a cart-generating URL with JavaScript
-
-You need to create a JSON with cart details, convert it to a string, and then encode it to URI format. The cart structure used in this method matches the one from REST API and cart management methods.
+* Create a JSON with cart details using the cart structure from JS API cart management methods.
 
 {% hint style="info" %}
 Only the `products` field is required for the method to work.
 {% endhint %}
 
-Once you have a variable with cart JSON, use `JSON.stringify()` method to convert it to a string, then encode it with the `encodeURIComponent()` method.
-
-With the cart encoded to a `cartCode` variable, you can compose a link that opens a shopping cart and fills it with products and address details.
+* Convert it to a string ( `JSON.stringify()` ).
+* Encode it to URI format (`encodeURIComponent()` ).&#x20;
+* Combine it with the base URL to get the resulting URL. Use the code example below to get the format.
 
 <details>
 
